@@ -8,7 +8,7 @@ license=('GPL2')
 depends=('qt5-base' 'qt5-svg' 'qt5-declarative' 'openssl')
 makedepends=('qt5-tools')
 source=("http://downloads.sourceforge.net/project/${pkgname}/src/${pkgname}-${pkgver}.tar.xz")
-md5sums=('5cf12888026849c3e27121354cfa7ec8')
+md5sums=('810911fbae1b2acb1812040d70cfe334')
 
 prepare() {
   cd "${pkgname}-${pkgver}"
