@@ -1,5 +1,5 @@
 pkgname=qownnotes
-pkgver=16.06.13
+pkgver=16.07.2
 pkgrel=1
 pkgdesc="Plain-text file notepad and todo list manager with markdown support and ownCloud integration"
 arch=('x86_64')
@@ -8,7 +8,7 @@ license=('GPL2')
 depends=('qt5-base' 'qt5-svg' 'qt5-declarative' 'openssl')
 makedepends=('qt5-tools')
 source=("http://downloads.sourceforge.net/project/${pkgname}/src/${pkgname}-${pkgver}.tar.xz")
-md5sums=('94de74903397094d4982a05418743a31')
+md5sums=('4be16ff42ea99343236b7ef0d9dc9a74')
 
 prepare() {
   cd "${pkgname}-${pkgver}"
@@ -26,20 +26,5 @@ build() {
 package() {
   cd "${pkgname}-${pkgver}"
 
-  # make DESTDIR="${pkgdir}/" install
-
-  # install application
-  install -D -m755 QOwnNotes "${pkgdir}/usr/bin/QOwnNotes"
-
-  # install visuals
-  install -D -m644 QOwnNotes.desktop "${pkgdir}/usr/share/applications/QOwnNotes.desktop"
-  install -D -m644 "images/icons/128x128/QOwnNotes.png" "${pkgdir}/usr/share/pixmaps/QOwnNotes.png"
-  for format in {16x16,24x24,32x32,48x48,64x64,96x96,128x128,256x256,512x512}; do
-    install -D -m644 "images/icons/${format}/QOwnNotes.png" "${pkgdir}/usr/share/icons/hicolor/$format/apps/QOwnNotes.png"
-  done
-  install -D -m644 "images/icons/scalable/QOwnNotes.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/QOwnNotes.svg"
-
-  # install languages
-  install -d "${pkgdir}/usr/share/QOwnNotes/languages/"
-  install -D -m644 languages/*.qm "${pkgdir}/usr/share/QOwnNotes/languages/"
+  make INSTALL_ROOT="${pkgdir}/" install
 }
