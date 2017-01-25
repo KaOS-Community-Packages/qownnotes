@@ -1,5 +1,5 @@
 pkgname=qownnotes
-pkgver=17.01.9
+pkgver=17.01.10
 pkgrel=1
 pkgdesc="Plain-text file notepad and todo list manager with markdown support and ownCloud integration"
 arch=('x86_64')
@@ -8,7 +8,7 @@ license=('GPL2')
 depends=('qt5-base' 'qt5-svg' 'qt5-declarative' 'openssl')
 makedepends=('qt5-tools')
 source=("https://downloads.sourceforge.net/project/${pkgname}/src/${pkgname}-${pkgver}.tar.xz")
-md5sums=('56a3a608ea500849c9400d6a8f46ac74')
+md5sums=('c8ba8d155d0ef7e75711d14e3f228cc6')
 
 prepare() {
   cd "${pkgname}-${pkgver}"
