@@ -1,6 +1,6 @@
 # QOwnNotes
 
-Open Source plain-text file notepad with markdown support and todo list manager, that (optionally) works together with ownCloud.
+Open Source plain-text file notepad with markdown support and todo list manager, that (optionally) works together with ownCloud/nextCloud.
 
 URL: https://www.qownnotes.org
 
