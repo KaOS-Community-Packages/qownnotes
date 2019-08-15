@@ -1,5 +1,5 @@
 pkgname=qownnotes
-pkgver=19.8.3
+pkgver=19.8.5
 pkgrel=1
 pkgdesc="Plain-text file notepad and todo list manager with markdown support and ownCloud integration"
 arch=('x86_64')
@@ -8,7 +8,7 @@ license=('GPL2')
 depends=('qt5-base' 'qt5-declarative' 'qt5-svg' 'qt5-websockets' 'qt5-xmlpatterns' 'openssl')
 makedepends=('qt5-tools')
 source=("https://download.tuxfamily.org/${pkgname}/src/${pkgname}-${pkgver}.tar.xz")
-sha256sums=('032c5232c67931fca2489e4f1e689e4e0cd6a2b35f40c2674cb99b7d694bbb98')
+sha256sums=('4210815ffbf20e7fe93b2c720dc363925afc53730f7de12612d24a27a7ab8c5f')
 
 prepare() {
   cd "${pkgname}-${pkgver}"
